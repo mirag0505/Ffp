@@ -4,7 +4,8 @@ let rec pow = function
     | (s, n) -> s + pow (s, n-1)
 
 // 17.2
-let rec isIthChar = fun (s: string,n,c) -> s.[n] = c
+let isIthChar (s: string, n: int, c: char) =
+    n >= 0 && n < String.length s && s.[n] = c
 
 // 17.3
 let rec occFromIth = function
