@@ -75,7 +75,9 @@ let revrev xss =
     let rec rev acc = function
         | [] -> acc
         | x::xs -> rev (x::acc) xs
+    
     let rec maprev acc = function
         | [] -> acc
         | xs::xss -> maprev (rev [] xs :: acc) xss
-    rev [] (maprev [] xss)
+    
+    maprev [] xss
