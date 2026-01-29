@@ -1,7 +1,7 @@
 // 50.2.1
 let fac_seq = 
     seq {
-        let mutable current = 1
+        let mutable current = 0
         let mutable fact = 1
         while true do
             yield fact
